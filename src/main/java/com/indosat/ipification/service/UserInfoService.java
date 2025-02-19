@@ -1,6 +1,7 @@
 package com.indosat.ipification.service;
 
 import org.springframework.stereotype.Service;
+
 import com.indosat.ipification.dto.IRequest;
 import com.indosat.ipification.dto.IResponse;
 import com.indosat.ipification.dto.UserInfoResponse;

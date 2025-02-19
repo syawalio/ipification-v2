@@ -10,26 +10,74 @@ import com.indosat.ipification.repository.LogRepository;
 
 import lombok.AllArgsConstructor;
 
+// @Component
+// @AllArgsConstructor
+// public class LogUtils {
+//     private final LogRepository lr;
+
+//     public void saveLog(String noHp, String message, String service, boolean isRequest, String rc, Boolean result) {
+//         LogEntity log = new LogEntity();
+//         log.setUid(UUID.randomUUID());
+//         log.setNoHp(noHp);
+//         log.setService(service);
+
+//         if (isRequest) {
+//             log.setRequest(message);
+//             log.setRequestDate(new Date());
+//             log.setResponse(null);
+//             log.setResponseDate(null);
+//         } else {
+//             log.setRequest(null);
+//             log.setRequestDate(null);
+//             log.setResponse(message);
+//             log.setResponseDate(new Date());
+//             log.setRc(rc);
+//             log.setResult(result);
+//         }
+
+//         lr.save(log);
+//     }
+// }
+
+
+
 @Component
 @AllArgsConstructor
 public class LogUtils {
     private final LogRepository lr;
 
-    public void saveLog(String noHp, String message, String service, boolean isRequest, String rc, Boolean result) {
+    public LogEntity saveRequestLog(String noHp, String message, String service) {
         LogEntity log = new LogEntity();
         log.setUid(UUID.randomUUID());
         log.setNoHp(noHp);
         log.setService(service);
+        log.setRequest(message);
+        log.setRequestDate(new Date());
 
-        if (isRequest) {
-            log.setRequest(message);
-            log.setRequestDate(new Date());
-        } else {
-            log.setResponse(message);
-            log.setResponseDate(new Date());
-            log.setRc(rc);
-            log.setResult(result);
-        }
+        lr.save(log);
+        return log;
+    }
+
+    public void updateResponseLog(LogEntity log, String message, String rc, Boolean result) {
+        log.setResponse(message);
+        log.setResponseDate(new Date());
+        log.setRc(rc);
+        log.setResult(result);
+
+        lr.save(log);
+    }
+
+    public void errorResponse(String noHp, String service, String message) {
+        LogEntity log = new LogEntity();
+        log.setUid(UUID.randomUUID());
+        log.setNoHp(noHp);
+        log.setService(service);
+        log.setRequest("");
+        log.setRequestDate(new Date());
+        log.setResponse(message);
+        log.setResponseDate(new Date());
+        log.setRc("99");
+        log.setResult(null);
 
         lr.save(log);
     }
