@@ -2,13 +2,12 @@ package com.indosat.ipification.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import com.indosat.ipification.entity.CounterEntity;
 import com.indosat.ipification.repository.CounterRepository;
 import com.indosat.ipification.repository.ParameterRepository;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -18,28 +17,30 @@ public class CounterService {
     private final ParameterRepository parameterRepository;
 
     public boolean isLimitExceeded(String noHp) {
-        int limit = Integer.parseInt(parameterRepository.findById("ParameterNohp").get().getValue());
+        int limit = 3;
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date today = new Date();
 
-        CounterEntity counter = counterRepository.findById(noHp).orElseGet(() -> {
+        Optional<CounterEntity> counterOpt = counterRepository.findById(noHp);
+        CounterEntity counter = counterOpt.orElseGet(() -> {
             CounterEntity newCounter = new CounterEntity();
             newCounter.setPhone(noHp);
-            newCounter.setDate(new Date());
+            newCounter.setDate(today);
             newCounter.setCount(0);
-            return counterRepository.save(newCounter);
+            return newCounter;
         });
 
-        int count = counter.getCount();
-        if (sdf.format(counter.getDate()).equals(sdf.format(new Date()))) {
-            count++;
+        if (sdf.format(counter.getDate()).equals(sdf.format(today))) {
+            if (counter.getCount() >= limit) {
+                return true;
+            }
+            counter.setCount(counter.getCount() + 1);
         } else {
-            count = 1;
+            counter.setCount(1);
+            counter.setDate(today);
         }
 
-        counter.setCount(count);
-        counter.setDate(new Date());
         counterRepository.save(counter);
-
-        return count > limit;
+        return false;
     }
 }

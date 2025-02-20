@@ -15,5 +15,7 @@ public class IRequest implements Serializable {
     private String state;
 
     private Boolean verified;
+
+    private String message;
 }
 
