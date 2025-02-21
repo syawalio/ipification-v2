@@ -15,7 +15,7 @@ public class UserInfoController {
 
     private final UserInfoService userInfoService;
 
-    @PostMapping("token")
+    @PostMapping("userinfo")
     public ResponseEntity<IRequest> getUserInfo(@RequestBody IRequest request) {
         log.info("Received request for user info: {}", request);
         IRequest response = userInfoService.getUserInfo(request);

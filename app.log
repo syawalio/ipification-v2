@@ -1,0 +1,671 @@
+2025-02-20 14:35:36,496 INFO com.indosat.ipification.IpificationApplication [restartedMain] Starting IpificationApplication using Java 17.0.14 with PID 53420 (/home/dzakkk/Documents/code/work/ipification-v2/ipification/target/classes started by dzakkk in /home/dzakkk/Documents/code/work/ipification-v2/ipification)
+2025-02-20 14:35:36,496 INFO com.indosat.ipification.IpificationApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-02-20 14:35:36,609 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 14:35:36,617 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2025-02-20 14:35:36,687 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 2110 (http)
+2025-02-20 14:35:36,687 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2025-02-20 14:35:36,687 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-20 14:35:36,694 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-02-20 14:35:36,694 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 197 ms
+2025-02-20 14:35:36,722 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-79 - Starting...
+2025-02-20 14:35:36,756 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-79 - Added connection org.postgresql.jdbc.PgConnection@2e1c8503
+2025-02-20 14:35:36,756 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-79 - Start completed.
+2025-02-20 14:35:36,761 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 14:35:36,763 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-02-20 14:35:36,769 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 14:35:36,774 INFO org.hibernate.orm.connections.pooling [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-79)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-20 14:35:36,820 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 14:35:36,820 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 14:35:36,895 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 14:35:36,986 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload serverc
+2025-02-20 14:35:36,994 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 2110 (http) with context path '/'
+2025-02-20 14:35:37,000 INFO com.indosat.ipification.IpificationApplication [restartedMain] Started IpificationApplication in 0.545 seconds (process running for 2613.564)
+2025-02-20 14:35:37,001 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-02-20 14:35:45,328 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [http-nio-2110-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-20 14:35:45,328 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-2110-exec-2] Initializing Servlet 'dispatcherServlet'
+2025-02-20 14:35:45,329 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-2110-exec-2] Completed initialization in 1 ms
+2025-02-20 14:35:45,333 INFO com.indosat.ipification.controller.UserInfoController [http-nio-2110-exec-2] Received request for user info: IRequest(redirect_uri=null, code=codeaaaaaaaaaaaaaaaaaaaa, nohp=620000000007, state=jakwanPacarYunaItzy, verified=null, message=null)
+2025-02-20 14:35:45,337 INFO com.indosat.ipification.service.UserInfoService [http-nio-2110-exec-2] Processing getUserInfo for 620000000007
+2025-02-20 14:35:45,351 INFO com.indosat.ipification.service.IpificationService [http-nio-2110-exec-2] Requesting token for noHp=620000000007 to URL=https://api.ipification.com/auth/realms/ipification/protocol/openid-connect/token
+2025-02-20 14:35:45,612 ERROR com.indosat.ipification.service.IpificationService [http-nio-2110-exec-2] Error retrieving token for noHp=620000000007 from URL=https://api.ipification.com/auth/realms/ipification/protocol/openid-connect/token : 400 Bad Request on POST request for "https://api.ipification.com/auth/realms/ipification/protocol/openid-connect/token": "{"error":"invalid_client","error_description":"Invalid client credentials"}"
+2025-02-20 14:35:45,618 WARN com.indosat.ipification.service.UserInfoService [http-nio-2110-exec-2] Failed to retrieve access token.
+2025-02-20 14:35:45,618 INFO com.indosat.ipification.controller.UserInfoController [http-nio-2110-exec-2] Returning response: IRequest(redirect_uri=null, code=codeaaaaaaaaaaaaaaaaaaaa, nohp=620000000007, state=jakwanPacarYunaItzy, verified=false, message=Failed to retrieve access token.)
+2025-02-20 14:35:49,758 INFO com.indosat.ipification.controller.UserInfoController [http-nio-2110-exec-3] Received request for user info: IRequest(redirect_uri=null, code=codeaaaaaaaaaaaaaaaaaaaa, nohp=620000000007, state=jakwanPacarYunaItzy, verified=null, message=null)
+2025-02-20 14:35:49,758 INFO com.indosat.ipification.service.UserInfoService [http-nio-2110-exec-3] Processing getUserInfo for 620000000007
+2025-02-20 14:35:49,762 WARN com.indosat.ipification.service.UserInfoService [http-nio-2110-exec-3] Request limit exceeded for 620000000007
+2025-02-20 14:35:49,762 INFO com.indosat.ipification.controller.UserInfoController [http-nio-2110-exec-3] Returning response: IRequest(redirect_uri=null, code=codeaaaaaaaaaaaaaaaaaaaa, nohp=620000000007, state=jakwanPacarYunaItzy, verified=false, message=Request limit exceeded. You can only verify up to 3 times per day.)
+2025-02-20 14:36:01,932 INFO com.indosat.ipification.controller.UserInfoController [http-nio-2110-exec-4] Received request for user info: IRequest(redirect_uri=null, code=codeaaaaaaaaaaaaaaaaaaaa, nohp=620000000007, state=jakwanPacarYunaItzy, verified=null, message=null)
+2025-02-20 14:36:01,932 INFO com.indosat.ipification.service.UserInfoService [http-nio-2110-exec-4] Processing getUserInfo for 620000000007
+2025-02-20 14:36:01,936 WARN com.indosat.ipification.service.UserInfoService [http-nio-2110-exec-4] Request limit exceeded for 620000000007
+2025-02-20 14:36:01,936 INFO com.indosat.ipification.controller.UserInfoController [http-nio-2110-exec-4] Returning response: IRequest(redirect_uri=null, code=codeaaaaaaaaaaaaaaaaaaaa, nohp=620000000007, state=jakwanPacarYunaItzy, verified=false, message=Request limit exceeded. You can only verify up to 3 times per day.)
+2025-02-20 15:29:51,596 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-20 15:29:51,600 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-309] Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 15:29:51,601 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-02-20 15:29:51,602 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-309] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:29:51,602 INFO com.zaxxer.hikari.HikariDataSource [Thread-309] HikariPool-79 - Shutdown initiated...
+2025-02-20 15:29:51,606 INFO com.zaxxer.hikari.HikariDataSource [Thread-309] HikariPool-79 - Shutdown completed.
+2025-02-20 15:29:51,713 INFO com.indosat.ipification.IpificationApplication [restartedMain] Starting IpificationApplication using Java 17.0.14 with PID 53420 (/home/dzakkk/Documents/code/work/ipification-v2/ipification/target/classes started by dzakkk in /home/dzakkk/Documents/code/work/ipification-v2/ipification)
+2025-02-20 15:29:51,713 INFO com.indosat.ipification.IpificationApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-02-20 15:29:51,829 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 15:29:51,835 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2025-02-20 15:29:51,923 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 2110 (http)
+2025-02-20 15:29:51,924 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2025-02-20 15:29:51,924 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-20 15:29:51,930 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-02-20 15:29:51,930 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 215 ms
+2025-02-20 15:29:51,964 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-80 - Starting...
+2025-02-20 15:29:51,998 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-80 - Added connection org.postgresql.jdbc.PgConnection@7ebef28
+2025-02-20 15:29:51,998 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-80 - Start completed.
+2025-02-20 15:29:52,002 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 15:29:52,004 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-02-20 15:29:52,010 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 15:29:52,015 INFO org.hibernate.orm.connections.pooling [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-80)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-20 15:29:52,050 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 15:29:52,051 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:29:52,116 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 15:29:52,210 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-02-20 15:29:52,218 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 2110 (http) with context path '/'
+2025-02-20 15:29:52,221 INFO com.indosat.ipification.IpificationApplication [restartedMain] Started IpificationApplication in 0.53 seconds (process running for 5868.786)
+2025-02-20 15:29:52,222 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-02-20 15:29:54,615 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-20 15:29:54,616 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-313] Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 15:29:54,617 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-02-20 15:29:54,619 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-313] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:29:54,619 INFO com.zaxxer.hikari.HikariDataSource [Thread-313] HikariPool-80 - Shutdown initiated...
+2025-02-20 15:29:54,622 INFO com.zaxxer.hikari.HikariDataSource [Thread-313] HikariPool-80 - Shutdown completed.
+2025-02-20 15:29:54,709 INFO com.indosat.ipification.IpificationApplication [restartedMain] Starting IpificationApplication using Java 17.0.14 with PID 53420 (/home/dzakkk/Documents/code/work/ipification-v2/ipification/target/classes started by dzakkk in /home/dzakkk/Documents/code/work/ipification-v2/ipification)
+2025-02-20 15:29:54,709 INFO com.indosat.ipification.IpificationApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-02-20 15:29:54,809 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 15:29:54,815 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2025-02-20 15:29:54,883 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 2110 (http)
+2025-02-20 15:29:54,884 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2025-02-20 15:29:54,884 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-20 15:29:54,889 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-02-20 15:29:54,889 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 179 ms
+2025-02-20 15:29:54,916 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-81 - Starting...
+2025-02-20 15:29:54,949 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-81 - Added connection org.postgresql.jdbc.PgConnection@31972ae1
+2025-02-20 15:29:54,949 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-81 - Start completed.
+2025-02-20 15:29:54,952 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 15:29:54,954 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-02-20 15:29:54,959 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 15:29:54,964 INFO org.hibernate.orm.connections.pooling [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-81)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-20 15:29:55,003 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 15:29:55,003 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:29:55,060 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 15:29:55,143 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-02-20 15:29:55,150 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 2110 (http) with context path '/'
+2025-02-20 15:29:55,154 INFO com.indosat.ipification.IpificationApplication [restartedMain] Started IpificationApplication in 0.464 seconds (process running for 5871.718)
+2025-02-20 15:29:55,155 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-02-20 15:40:21,539 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-20 15:40:21,541 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-317] Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 15:40:21,542 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-02-20 15:40:21,543 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-317] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:40:21,544 INFO com.zaxxer.hikari.HikariDataSource [Thread-317] HikariPool-81 - Shutdown initiated...
+2025-02-20 15:40:21,548 INFO com.zaxxer.hikari.HikariDataSource [Thread-317] HikariPool-81 - Shutdown completed.
+2025-02-20 15:40:21,667 INFO com.indosat.ipification.IpificationApplication [restartedMain] Starting IpificationApplication using Java 17.0.14 with PID 53420 (/home/dzakkk/Documents/code/work/ipification-v2/ipification/target/classes started by dzakkk in /home/dzakkk/Documents/code/work/ipification-v2/ipification)
+2025-02-20 15:40:21,667 INFO com.indosat.ipification.IpificationApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-02-20 15:40:21,787 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 15:40:21,793 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2025-02-20 15:40:21,874 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 2110 (http)
+2025-02-20 15:40:21,874 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2025-02-20 15:40:21,874 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-20 15:40:21,880 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-02-20 15:40:21,880 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 211 ms
+2025-02-20 15:40:21,907 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-82 - Starting...
+2025-02-20 15:40:21,934 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-82 - Added connection org.postgresql.jdbc.PgConnection@6e811855
+2025-02-20 15:40:21,934 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-82 - Start completed.
+2025-02-20 15:40:21,938 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 15:40:21,939 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-02-20 15:40:21,943 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 15:40:21,948 INFO org.hibernate.orm.connections.pooling [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-82)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-20 15:40:21,973 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 15:40:21,973 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:40:22,005 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 15:40:22,054 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-02-20 15:40:22,058 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 2110 (http) with context path '/'
+2025-02-20 15:40:22,061 INFO com.indosat.ipification.IpificationApplication [restartedMain] Started IpificationApplication in 0.415 seconds (process running for 6498.625)
+2025-02-20 15:40:22,061 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-02-20 15:40:23,456 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-20 15:40:23,457 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-321] Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 15:40:23,458 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-02-20 15:40:23,460 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-321] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:40:23,460 INFO com.zaxxer.hikari.HikariDataSource [Thread-321] HikariPool-82 - Shutdown initiated...
+2025-02-20 15:40:23,465 INFO com.zaxxer.hikari.HikariDataSource [Thread-321] HikariPool-82 - Shutdown completed.
+2025-02-20 15:40:23,559 INFO com.indosat.ipification.IpificationApplication [restartedMain] Starting IpificationApplication using Java 17.0.14 with PID 53420 (/home/dzakkk/Documents/code/work/ipification-v2/ipification/target/classes started by dzakkk in /home/dzakkk/Documents/code/work/ipification-v2/ipification)
+2025-02-20 15:40:23,559 INFO com.indosat.ipification.IpificationApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-02-20 15:40:23,688 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 15:40:23,694 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
+2025-02-20 15:40:23,739 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 2110 (http)
+2025-02-20 15:40:23,740 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2025-02-20 15:40:23,740 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-20 15:40:23,744 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-02-20 15:40:23,744 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 184 ms
+2025-02-20 15:40:23,759 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-83 - Starting...
+2025-02-20 15:40:23,774 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-83 - Added connection org.postgresql.jdbc.PgConnection@6f441676
+2025-02-20 15:40:23,774 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-83 - Start completed.
+2025-02-20 15:40:23,776 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 15:40:23,777 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-02-20 15:40:23,779 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 15:40:23,783 INFO org.hibernate.orm.connections.pooling [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-83)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-20 15:40:23,801 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 15:40:23,801 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:40:23,827 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 15:40:23,867 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-02-20 15:40:23,872 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 2110 (http) with context path '/'
+2025-02-20 15:40:23,874 INFO com.indosat.ipification.IpificationApplication [restartedMain] Started IpificationApplication in 0.336 seconds (process running for 6500.438)
+2025-02-20 15:40:23,874 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-02-20 15:40:25,270 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-20 15:40:25,271 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-325] Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 15:40:25,272 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-02-20 15:40:25,275 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-325] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:40:25,276 INFO com.zaxxer.hikari.HikariDataSource [Thread-325] HikariPool-83 - Shutdown initiated...
+2025-02-20 15:40:25,282 INFO com.zaxxer.hikari.HikariDataSource [Thread-325] HikariPool-83 - Shutdown completed.
+2025-02-20 15:40:25,375 INFO com.indosat.ipification.IpificationApplication [restartedMain] Starting IpificationApplication using Java 17.0.14 with PID 53420 (/home/dzakkk/Documents/code/work/ipification-v2/ipification/target/classes started by dzakkk in /home/dzakkk/Documents/code/work/ipification-v2/ipification)
+2025-02-20 15:40:25,375 INFO com.indosat.ipification.IpificationApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-02-20 15:40:25,503 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 15:40:25,510 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2025-02-20 15:40:25,601 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 2110 (http)
+2025-02-20 15:40:25,602 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2025-02-20 15:40:25,602 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-20 15:40:25,608 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-02-20 15:40:25,609 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 232 ms
+2025-02-20 15:40:25,639 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-84 - Starting...
+2025-02-20 15:40:25,679 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-84 - Added connection org.postgresql.jdbc.PgConnection@380959f3
+2025-02-20 15:40:25,679 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-84 - Start completed.
+2025-02-20 15:40:25,683 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 15:40:25,684 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-02-20 15:40:25,689 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 15:40:25,694 INFO org.hibernate.orm.connections.pooling [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-84)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-20 15:40:25,736 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 15:40:25,736 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:40:25,783 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 15:40:25,834 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-02-20 15:40:25,838 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 2110 (http) with context path '/'
+2025-02-20 15:40:25,841 INFO com.indosat.ipification.IpificationApplication [restartedMain] Started IpificationApplication in 0.488 seconds (process running for 6502.405)
+2025-02-20 15:40:25,841 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-02-20 15:40:27,237 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-20 15:40:27,239 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-329] Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 15:40:27,240 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-02-20 15:40:27,241 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-329] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:40:27,242 INFO com.zaxxer.hikari.HikariDataSource [Thread-329] HikariPool-84 - Shutdown initiated...
+2025-02-20 15:40:27,245 INFO com.zaxxer.hikari.HikariDataSource [Thread-329] HikariPool-84 - Shutdown completed.
+2025-02-20 15:40:27,331 INFO com.indosat.ipification.IpificationApplication [restartedMain] Starting IpificationApplication using Java 17.0.14 with PID 53420 (/home/dzakkk/Documents/code/work/ipification-v2/ipification/target/classes started by dzakkk in /home/dzakkk/Documents/code/work/ipification-v2/ipification)
+2025-02-20 15:40:27,331 INFO com.indosat.ipification.IpificationApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-02-20 15:40:27,450 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 15:40:27,460 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 9 ms. Found 3 JPA repository interfaces.
+2025-02-20 15:40:27,577 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 2110 (http)
+2025-02-20 15:40:27,578 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2025-02-20 15:40:27,578 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-20 15:40:27,586 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-02-20 15:40:27,586 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 253 ms
+2025-02-20 15:40:27,618 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-85 - Starting...
+2025-02-20 15:40:27,652 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-85 - Added connection org.postgresql.jdbc.PgConnection@4e8ba89f
+2025-02-20 15:40:27,652 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-85 - Start completed.
+2025-02-20 15:40:27,656 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 15:40:27,657 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-02-20 15:40:27,664 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 15:40:27,669 INFO org.hibernate.orm.connections.pooling [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-85)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-20 15:40:27,712 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 15:40:27,712 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:40:27,774 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 15:40:27,862 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-02-20 15:40:27,871 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 2110 (http) with context path '/'
+2025-02-20 15:40:27,875 INFO com.indosat.ipification.IpificationApplication [restartedMain] Started IpificationApplication in 0.562 seconds (process running for 6504.439)
+2025-02-20 15:40:27,876 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-02-20 15:40:30,267 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-20 15:40:30,268 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-333] Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 15:40:30,269 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-02-20 15:40:30,269 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-333] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:40:30,270 INFO com.zaxxer.hikari.HikariDataSource [Thread-333] HikariPool-85 - Shutdown initiated...
+2025-02-20 15:40:30,271 INFO com.zaxxer.hikari.HikariDataSource [Thread-333] HikariPool-85 - Shutdown completed.
+2025-02-20 15:40:30,326 INFO com.indosat.ipification.IpificationApplication [restartedMain] Starting IpificationApplication using Java 17.0.14 with PID 53420 (/home/dzakkk/Documents/code/work/ipification-v2/ipification/target/classes started by dzakkk in /home/dzakkk/Documents/code/work/ipification-v2/ipification)
+2025-02-20 15:40:30,326 INFO com.indosat.ipification.IpificationApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-02-20 15:40:30,388 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 15:40:30,392 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 3 ms. Found 3 JPA repository interfaces.
+2025-02-20 15:40:30,427 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 2110 (http)
+2025-02-20 15:40:30,428 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2025-02-20 15:40:30,428 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-20 15:40:30,431 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-02-20 15:40:30,431 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 105 ms
+2025-02-20 15:40:30,447 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-86 - Starting...
+2025-02-20 15:40:30,464 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-86 - Added connection org.postgresql.jdbc.PgConnection@c5fd60d
+2025-02-20 15:40:30,464 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-86 - Start completed.
+2025-02-20 15:40:30,466 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 15:40:30,467 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-02-20 15:40:30,470 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 15:40:30,473 INFO org.hibernate.orm.connections.pooling [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-86)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-20 15:40:30,506 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 15:40:30,507 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:40:30,540 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 15:40:30,586 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-02-20 15:40:30,590 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 2110 (http) with context path '/'
+2025-02-20 15:40:30,593 INFO com.indosat.ipification.IpificationApplication [restartedMain] Started IpificationApplication in 0.278 seconds (process running for 6507.157)
+2025-02-20 15:40:30,594 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-02-20 15:40:33,991 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-20 15:40:33,992 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-337] Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 15:40:33,994 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-02-20 15:40:33,995 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-337] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:40:33,996 INFO com.zaxxer.hikari.HikariDataSource [Thread-337] HikariPool-86 - Shutdown initiated...
+2025-02-20 15:40:33,998 INFO com.zaxxer.hikari.HikariDataSource [Thread-337] HikariPool-86 - Shutdown completed.
+2025-02-20 15:40:34,081 INFO com.indosat.ipification.IpificationApplication [restartedMain] Starting IpificationApplication using Java 17.0.14 with PID 53420 (/home/dzakkk/Documents/code/work/ipification-v2/ipification/target/classes started by dzakkk in /home/dzakkk/Documents/code/work/ipification-v2/ipification)
+2025-02-20 15:40:34,081 INFO com.indosat.ipification.IpificationApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-02-20 15:40:34,196 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 15:40:34,203 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2025-02-20 15:40:34,272 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 2110 (http)
+2025-02-20 15:40:34,272 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2025-02-20 15:40:34,272 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-20 15:40:34,278 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-02-20 15:40:34,278 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 195 ms
+2025-02-20 15:40:34,306 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-87 - Starting...
+2025-02-20 15:40:34,338 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-87 - Added connection org.postgresql.jdbc.PgConnection@4a5f4b6
+2025-02-20 15:40:34,338 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-87 - Start completed.
+2025-02-20 15:40:34,342 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 15:40:34,343 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-02-20 15:40:34,349 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 15:40:34,354 INFO org.hibernate.orm.connections.pooling [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-87)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-20 15:40:34,394 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 15:40:34,394 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:40:34,468 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 15:40:34,541 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-02-20 15:40:34,547 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 2110 (http) with context path '/'
+2025-02-20 15:40:34,551 INFO com.indosat.ipification.IpificationApplication [restartedMain] Started IpificationApplication in 0.491 seconds (process running for 6511.115)
+2025-02-20 15:40:34,552 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-02-20 15:40:35,944 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-20 15:40:35,945 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-341] Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 15:40:35,945 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-02-20 15:40:35,946 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-341] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:40:35,947 INFO com.zaxxer.hikari.HikariDataSource [Thread-341] HikariPool-87 - Shutdown initiated...
+2025-02-20 15:40:35,949 INFO com.zaxxer.hikari.HikariDataSource [Thread-341] HikariPool-87 - Shutdown completed.
+2025-02-20 15:40:36,037 INFO com.indosat.ipification.IpificationApplication [restartedMain] Starting IpificationApplication using Java 17.0.14 with PID 53420 (/home/dzakkk/Documents/code/work/ipification-v2/ipification/target/classes started by dzakkk in /home/dzakkk/Documents/code/work/ipification-v2/ipification)
+2025-02-20 15:40:36,037 INFO com.indosat.ipification.IpificationApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-02-20 15:40:36,153 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 15:40:36,160 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2025-02-20 15:40:36,232 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 2110 (http)
+2025-02-20 15:40:36,233 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2025-02-20 15:40:36,233 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-20 15:40:36,239 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-02-20 15:40:36,239 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 201 ms
+2025-02-20 15:40:36,268 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-88 - Starting...
+2025-02-20 15:40:36,302 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-88 - Added connection org.postgresql.jdbc.PgConnection@13b9b86
+2025-02-20 15:40:36,302 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-88 - Start completed.
+2025-02-20 15:40:36,306 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 15:40:36,307 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-02-20 15:40:36,313 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 15:40:36,318 INFO org.hibernate.orm.connections.pooling [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-88)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-20 15:40:36,351 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 15:40:36,351 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:40:36,393 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 15:40:36,438 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-02-20 15:40:36,443 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 2110 (http) with context path '/'
+2025-02-20 15:40:36,445 INFO com.indosat.ipification.IpificationApplication [restartedMain] Started IpificationApplication in 0.426 seconds (process running for 6513.009)
+2025-02-20 15:40:36,446 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-02-20 15:40:37,840 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-20 15:40:37,841 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-345] Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 15:40:37,841 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-02-20 15:40:37,842 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-345] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:40:37,842 INFO com.zaxxer.hikari.HikariDataSource [Thread-345] HikariPool-88 - Shutdown initiated...
+2025-02-20 15:40:37,845 INFO com.zaxxer.hikari.HikariDataSource [Thread-345] HikariPool-88 - Shutdown completed.
+2025-02-20 15:40:37,898 INFO com.indosat.ipification.IpificationApplication [restartedMain] Starting IpificationApplication using Java 17.0.14 with PID 53420 (/home/dzakkk/Documents/code/work/ipification-v2/ipification/target/classes started by dzakkk in /home/dzakkk/Documents/code/work/ipification-v2/ipification)
+2025-02-20 15:40:37,898 INFO com.indosat.ipification.IpificationApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-02-20 15:40:37,952 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 15:40:37,956 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 3 ms. Found 3 JPA repository interfaces.
+2025-02-20 15:40:37,992 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 2110 (http)
+2025-02-20 15:40:37,992 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2025-02-20 15:40:37,992 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-20 15:40:37,995 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-02-20 15:40:37,995 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 97 ms
+2025-02-20 15:40:38,009 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-89 - Starting...
+2025-02-20 15:40:38,025 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-89 - Added connection org.postgresql.jdbc.PgConnection@7622d7ac
+2025-02-20 15:40:38,025 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-89 - Start completed.
+2025-02-20 15:40:38,027 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 15:40:38,028 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-02-20 15:40:38,031 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 15:40:38,034 INFO org.hibernate.orm.connections.pooling [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-89)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-20 15:40:38,050 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 15:40:38,051 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:40:38,079 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 15:40:38,122 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-02-20 15:40:38,129 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 2110 (http) with context path '/'
+2025-02-20 15:40:38,132 INFO com.indosat.ipification.IpificationApplication [restartedMain] Started IpificationApplication in 0.244 seconds (process running for 6514.696)
+2025-02-20 15:40:38,132 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-02-20 15:43:22,808 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-20 15:43:22,809 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-349] Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 15:43:22,810 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-02-20 15:43:22,811 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-349] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:43:22,811 INFO com.zaxxer.hikari.HikariDataSource [Thread-349] HikariPool-89 - Shutdown initiated...
+2025-02-20 15:43:22,818 INFO com.zaxxer.hikari.HikariDataSource [Thread-349] HikariPool-89 - Shutdown completed.
+2025-02-20 15:43:22,936 INFO com.indosat.ipification.IpificationApplication [restartedMain] Starting IpificationApplication using Java 17.0.14 with PID 53420 (/home/dzakkk/Documents/code/work/ipification-v2/ipification/target/classes started by dzakkk in /home/dzakkk/Documents/code/work/ipification-v2/ipification)
+2025-02-20 15:43:22,936 INFO com.indosat.ipification.IpificationApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-02-20 15:43:23,069 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 15:43:23,076 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2025-02-20 15:43:23,147 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 2110 (http)
+2025-02-20 15:43:23,148 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2025-02-20 15:43:23,148 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-20 15:43:23,154 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-02-20 15:43:23,154 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 217 ms
+2025-02-20 15:43:23,184 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-90 - Starting...
+2025-02-20 15:43:23,219 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-90 - Added connection org.postgresql.jdbc.PgConnection@6d374b0c
+2025-02-20 15:43:23,219 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-90 - Start completed.
+2025-02-20 15:43:23,224 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 15:43:23,225 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-02-20 15:43:23,231 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 15:43:23,236 INFO org.hibernate.orm.connections.pooling [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-90)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-20 15:43:23,287 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 15:43:23,287 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:43:23,346 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 15:43:23,392 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-02-20 15:43:23,396 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 2110 (http) with context path '/'
+2025-02-20 15:43:23,398 INFO com.indosat.ipification.IpificationApplication [restartedMain] Started IpificationApplication in 0.481 seconds (process running for 6679.963)
+2025-02-20 15:43:23,399 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-02-20 15:43:24,796 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-20 15:43:24,797 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-353] Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 15:43:24,798 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-02-20 15:43:24,800 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-353] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:43:24,800 INFO com.zaxxer.hikari.HikariDataSource [Thread-353] HikariPool-90 - Shutdown initiated...
+2025-02-20 15:43:24,804 INFO com.zaxxer.hikari.HikariDataSource [Thread-353] HikariPool-90 - Shutdown completed.
+2025-02-20 15:43:24,912 INFO com.indosat.ipification.IpificationApplication [restartedMain] Starting IpificationApplication using Java 17.0.14 with PID 53420 (/home/dzakkk/Documents/code/work/ipification-v2/ipification/target/classes started by dzakkk in /home/dzakkk/Documents/code/work/ipification-v2/ipification)
+2025-02-20 15:43:24,912 INFO com.indosat.ipification.IpificationApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-02-20 15:43:25,021 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 15:43:25,028 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2025-02-20 15:43:25,104 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 2110 (http)
+2025-02-20 15:43:25,105 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2025-02-20 15:43:25,105 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-20 15:43:25,111 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-02-20 15:43:25,111 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 198 ms
+2025-02-20 15:43:25,137 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-91 - Starting...
+2025-02-20 15:43:25,169 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-91 - Added connection org.postgresql.jdbc.PgConnection@59127f27
+2025-02-20 15:43:25,169 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-91 - Start completed.
+2025-02-20 15:43:25,173 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 15:43:25,174 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-02-20 15:43:25,179 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 15:43:25,184 INFO org.hibernate.orm.connections.pooling [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-91)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-20 15:43:25,215 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 15:43:25,215 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 15:43:25,272 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 15:43:25,361 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-02-20 15:43:25,370 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 2110 (http) with context path '/'
+2025-02-20 15:43:25,374 INFO com.indosat.ipification.IpificationApplication [restartedMain] Started IpificationApplication in 0.48 seconds (process running for 6681.939)
+2025-02-20 15:43:25,375 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-02-20 16:38:05,475 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-20 16:38:05,476 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-357] Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 16:38:05,477 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-02-20 16:38:05,478 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-357] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 16:38:05,479 INFO com.zaxxer.hikari.HikariDataSource [Thread-357] HikariPool-91 - Shutdown initiated...
+2025-02-20 16:38:05,481 INFO com.zaxxer.hikari.HikariDataSource [Thread-357] HikariPool-91 - Shutdown completed.
+2025-02-20 16:38:05,563 INFO com.indosat.ipification.IpificationApplication [restartedMain] Starting IpificationApplication using Java 17.0.14 with PID 53420 (/home/dzakkk/Documents/code/work/ipification-v2/ipification/target/classes started by dzakkk in /home/dzakkk/Documents/code/work/ipification-v2/ipification)
+2025-02-20 16:38:05,563 INFO com.indosat.ipification.IpificationApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-02-20 16:38:05,683 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 16:38:05,690 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2025-02-20 16:38:05,783 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 2110 (http)
+2025-02-20 16:38:05,784 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2025-02-20 16:38:05,784 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-20 16:38:05,790 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-02-20 16:38:05,790 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 225 ms
+2025-02-20 16:38:05,823 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-92 - Starting...
+2025-02-20 16:38:05,859 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-92 - Added connection org.postgresql.jdbc.PgConnection@229596d3
+2025-02-20 16:38:05,859 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-92 - Start completed.
+2025-02-20 16:38:05,863 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 16:38:05,864 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-02-20 16:38:05,871 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 16:38:05,876 INFO org.hibernate.orm.connections.pooling [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-92)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-20 16:38:05,915 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 16:38:05,915 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 16:38:05,966 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 16:38:06,026 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-02-20 16:38:06,031 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 2110 (http) with context path '/'
+2025-02-20 16:38:06,033 INFO com.indosat.ipification.IpificationApplication [restartedMain] Started IpificationApplication in 0.49 seconds (process running for 7942.313)
+2025-02-20 16:38:06,034 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-02-20 16:38:08,429 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-20 16:38:08,430 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-361] Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 16:38:08,431 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-02-20 16:38:08,432 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-361] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 16:38:08,432 INFO com.zaxxer.hikari.HikariDataSource [Thread-361] HikariPool-92 - Shutdown initiated...
+2025-02-20 16:38:08,436 INFO com.zaxxer.hikari.HikariDataSource [Thread-361] HikariPool-92 - Shutdown completed.
+2025-02-20 16:38:08,527 INFO com.indosat.ipification.IpificationApplication [restartedMain] Starting IpificationApplication using Java 17.0.14 with PID 53420 (/home/dzakkk/Documents/code/work/ipification-v2/ipification/target/classes started by dzakkk in /home/dzakkk/Documents/code/work/ipification-v2/ipification)
+2025-02-20 16:38:08,528 INFO com.indosat.ipification.IpificationApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-02-20 16:38:08,656 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 16:38:08,662 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2025-02-20 16:38:08,729 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 2110 (http)
+2025-02-20 16:38:08,730 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2025-02-20 16:38:08,730 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-20 16:38:08,736 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-02-20 16:38:08,736 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 207 ms
+2025-02-20 16:38:08,764 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-93 - Starting...
+2025-02-20 16:38:08,796 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-93 - Added connection org.postgresql.jdbc.PgConnection@566fd174
+2025-02-20 16:38:08,796 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-93 - Start completed.
+2025-02-20 16:38:08,800 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 16:38:08,801 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-02-20 16:38:08,806 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 16:38:08,812 INFO org.hibernate.orm.connections.pooling [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-93)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-20 16:38:08,845 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 16:38:08,845 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 16:38:08,906 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 16:38:08,970 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-02-20 16:38:08,976 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 2110 (http) with context path '/'
+2025-02-20 16:38:08,979 INFO com.indosat.ipification.IpificationApplication [restartedMain] Started IpificationApplication in 0.471 seconds (process running for 7945.259)
+2025-02-20 16:38:08,979 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-02-20 16:38:11,374 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-20 16:38:11,375 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-365] Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 16:38:11,376 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-02-20 16:38:11,378 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-365] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 16:38:11,378 INFO com.zaxxer.hikari.HikariDataSource [Thread-365] HikariPool-93 - Shutdown initiated...
+2025-02-20 16:38:11,385 INFO com.zaxxer.hikari.HikariDataSource [Thread-365] HikariPool-93 - Shutdown completed.
+2025-02-20 16:38:11,479 INFO com.indosat.ipification.IpificationApplication [restartedMain] Starting IpificationApplication using Java 17.0.14 with PID 53420 (/home/dzakkk/Documents/code/work/ipification-v2/ipification/target/classes started by dzakkk in /home/dzakkk/Documents/code/work/ipification-v2/ipification)
+2025-02-20 16:38:11,479 INFO com.indosat.ipification.IpificationApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-02-20 16:38:11,593 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 16:38:11,599 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2025-02-20 16:38:11,686 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 2110 (http)
+2025-02-20 16:38:11,687 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2025-02-20 16:38:11,687 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-20 16:38:11,692 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-02-20 16:38:11,693 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 213 ms
+2025-02-20 16:38:11,722 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-94 - Starting...
+2025-02-20 16:38:11,756 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-94 - Added connection org.postgresql.jdbc.PgConnection@3c209346
+2025-02-20 16:38:11,757 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-94 - Start completed.
+2025-02-20 16:38:11,760 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 16:38:11,762 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-02-20 16:38:11,768 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 16:38:11,773 INFO org.hibernate.orm.connections.pooling [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-94)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-20 16:38:11,813 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 16:38:11,813 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 16:38:11,869 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 16:38:11,954 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-02-20 16:38:11,963 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 2110 (http) with context path '/'
+2025-02-20 16:38:11,968 INFO com.indosat.ipification.IpificationApplication [restartedMain] Started IpificationApplication in 0.508 seconds (process running for 7948.248)
+2025-02-20 16:38:11,969 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-02-20 16:38:13,358 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-20 16:38:13,359 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-369] Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 16:38:13,361 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-02-20 16:38:13,362 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-369] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 16:38:13,363 INFO com.zaxxer.hikari.HikariDataSource [Thread-369] HikariPool-94 - Shutdown initiated...
+2025-02-20 16:38:13,368 INFO com.zaxxer.hikari.HikariDataSource [Thread-369] HikariPool-94 - Shutdown completed.
+2025-02-20 16:38:13,453 INFO com.indosat.ipification.IpificationApplication [restartedMain] Starting IpificationApplication using Java 17.0.14 with PID 53420 (/home/dzakkk/Documents/code/work/ipification-v2/ipification/target/classes started by dzakkk in /home/dzakkk/Documents/code/work/ipification-v2/ipification)
+2025-02-20 16:38:13,453 INFO com.indosat.ipification.IpificationApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-02-20 16:38:13,560 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 16:38:13,566 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2025-02-20 16:38:13,638 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 2110 (http)
+2025-02-20 16:38:13,639 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2025-02-20 16:38:13,639 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-20 16:38:13,647 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-02-20 16:38:13,647 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 193 ms
+2025-02-20 16:38:13,677 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-95 - Starting...
+2025-02-20 16:38:13,708 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-95 - Added connection org.postgresql.jdbc.PgConnection@6bb4e2d5
+2025-02-20 16:38:13,708 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-95 - Start completed.
+2025-02-20 16:38:13,711 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 16:38:13,712 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-02-20 16:38:13,718 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 16:38:13,723 INFO org.hibernate.orm.connections.pooling [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-95)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-20 16:38:13,757 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 16:38:13,757 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 16:38:13,806 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 16:38:13,883 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-02-20 16:38:13,891 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 2110 (http) with context path '/'
+2025-02-20 16:38:13,895 INFO com.indosat.ipification.IpificationApplication [restartedMain] Started IpificationApplication in 0.458 seconds (process running for 7950.176)
+2025-02-20 16:38:13,896 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-02-20 16:38:15,286 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-02-20 16:38:15,287 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-373] Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 16:38:15,288 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-02-20 16:38:15,290 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Thread-373] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 16:38:15,291 INFO com.zaxxer.hikari.HikariDataSource [Thread-373] HikariPool-95 - Shutdown initiated...
+2025-02-20 16:38:15,293 INFO com.zaxxer.hikari.HikariDataSource [Thread-373] HikariPool-95 - Shutdown completed.
+2025-02-20 16:38:15,403 INFO com.indosat.ipification.IpificationApplication [restartedMain] Starting IpificationApplication using Java 17.0.14 with PID 53420 (/home/dzakkk/Documents/code/work/ipification-v2/ipification/target/classes started by dzakkk in /home/dzakkk/Documents/code/work/ipification-v2/ipification)
+2025-02-20 16:38:15,403 INFO com.indosat.ipification.IpificationApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-02-20 16:38:15,516 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-20 16:38:15,522 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 5 ms. Found 3 JPA repository interfaces.
+2025-02-20 16:38:15,593 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 2110 (http)
+2025-02-20 16:38:15,593 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2025-02-20 16:38:15,593 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-20 16:38:15,599 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-02-20 16:38:15,599 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 194 ms
+2025-02-20 16:38:15,627 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-96 - Starting...
+2025-02-20 16:38:15,654 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-96 - Added connection org.postgresql.jdbc.PgConnection@1d14576c
+2025-02-20 16:38:15,654 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-96 - Start completed.
+2025-02-20 16:38:15,657 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-20 16:38:15,659 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-02-20 16:38:15,662 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-20 16:38:15,667 INFO org.hibernate.orm.connections.pooling [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-96)']
+	Database driver: undefined/unknown
+	Database version: 16.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-20 16:38:15,691 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-20 16:38:15,691 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 16:38:15,726 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-20 16:38:15,770 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-02-20 16:38:15,774 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 2110 (http) with context path '/'
+2025-02-20 16:38:15,776 INFO com.indosat.ipification.IpificationApplication [restartedMain] Started IpificationApplication in 0.396 seconds (process running for 7952.057)
+2025-02-20 16:38:15,777 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-02-20 16:38:29,148 INFO org.apache.catalina.core.ContainerBase.[Tomcat-4].[localhost].[/] [http-nio-172.30.251.101-2110-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-20 16:38:29,148 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-172.30.251.101-2110-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-02-20 16:38:29,149 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-172.30.251.101-2110-exec-1] Completed initialization in 1 ms
+2025-02-20 16:38:29,153 INFO com.indosat.ipification.controller.UserInfoController [http-nio-172.30.251.101-2110-exec-1] Received request for user info: IRequest(redirect_uri=null, code=codeaaaaaaaaaaaaaaaaaaaa, nohp=620000000007, state=jakwanPacarYunaItzy, verified=null, message=null)
+2025-02-20 16:38:29,156 INFO com.indosat.ipification.service.UserInfoService [http-nio-172.30.251.101-2110-exec-1] Processing getUserInfo for 620000000007
+2025-02-20 16:38:29,162 WARN com.indosat.ipification.service.UserInfoService [http-nio-172.30.251.101-2110-exec-1] Request limit exceeded for 620000000007
+2025-02-20 16:38:29,162 INFO com.indosat.ipification.controller.UserInfoController [http-nio-172.30.251.101-2110-exec-1] Returning response: IRequest(redirect_uri=null, code=codeaaaaaaaaaaaaaaaaaaaa, nohp=620000000007, state=jakwanPacarYunaItzy, verified=false, message=Request limit exceeded. You can only verify up to 3 times per day.)
+2025-02-20 20:18:23,643 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [SpringApplicationShutdownHook] Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-20 20:18:23,645 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-02-20 20:18:23,653 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-20 20:18:23,654 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-96 - Shutdown initiated...
+2025-02-20 20:18:23,657 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-96 - Shutdown completed.

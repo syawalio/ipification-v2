@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import com.indosat.ipification.entity.CounterEntity;
 import com.indosat.ipification.repository.CounterRepository;
-import com.indosat.ipification.repository.ParameterRepository;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Optional;
@@ -14,7 +13,6 @@ import java.util.Optional;
 public class CounterService {
 
     private final CounterRepository counterRepository;
-    private final ParameterRepository parameterRepository;
 
     public boolean isLimitExceeded(String noHp) {
         int limit = 3;
