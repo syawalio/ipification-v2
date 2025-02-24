@@ -15,7 +15,7 @@ public class CounterService {
     private final CounterRepository counterRepository;
 
     public boolean isLimitExceeded(String noHp) {
-        int limit = 3;
+        int limit = 100;
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date today = new Date();
 

@@ -1,6 +1,7 @@
 package com.indosat.ipification.service;
 
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -32,6 +33,13 @@ public class IpificationService {
     private static final String TOKEN_URL = "https://api.ipification.com/auth/realms/ipification/protocol/openid-connect/token";
     private static final String USERINFO_URL = "https://api.ipification.com/auth/realms/ipification/protocol/openid-connect/userinfo";
 
+
+    @Value("${CLIENT_ID}")
+    private String CLIENT_ID;
+
+    @Value("${CLIENT_SECRET}")
+    private String CLIENT_SECRET;
+
     public IResponse sendHttpPostToken(IRequest req) {
         IResponse responseToken = new IResponse();
         
@@ -43,6 +51,8 @@ public class IpificationService {
         body.add("grant_type", "authorization_code");
         body.add("code", req.getCode());
         body.add("state", req.getState());
+        body.add("client_id", CLIENT_ID);
+        body.add("client_secret", CLIENT_SECRET);
         
         HttpEntity<MultiValueMap<String, String>> requestEntity = new HttpEntity<>(body, headers);
  
