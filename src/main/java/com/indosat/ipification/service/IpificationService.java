@@ -34,10 +34,10 @@ public class IpificationService {
     private static final String USERINFO_URL = "https://api.ipification.com/auth/realms/ipification/protocol/openid-connect/userinfo";
 
 
-    @Value("${CLIENT_ID}")
+    @Value("${client.id}")
     private String CLIENT_ID;
 
-    @Value("${CLIENT_SECRET}")
+    @Value("${client.secret}")
     private String CLIENT_SECRET;
 
     public IResponse sendHttpPostToken(IRequest req) {
@@ -70,7 +70,7 @@ public class IpificationService {
 
             logUtils.updateResponseLog(logData, responseStr, response.getStatusCode().toString(), null);
         } catch (Exception e) {
-            log.error("Error retrieving token for noHp={} from URL={} : {}", req.getNohp(), TOKEN_URL, e.getMessage());
+            log.info("Error retrieving token for noHp={} from URL={} : {}", req.getNohp(), TOKEN_URL, e.getMessage());
             logUtils.updateResponseLog(logData, "Error retrieving token", "99", null);
         }
 
@@ -100,7 +100,7 @@ public class IpificationService {
 
             logUtils.updateResponseLog(logData, responseStr, response.getStatusCode().toString(), verified);
         } catch (Exception e) {
-            log.error("Error retrieving user info for noHp={} from URL={} : {}", req.getNohp(), USERINFO_URL, e.getMessage());
+            log.info("Error retrieving user info for noHp={} from URL={} : {}", req.getNohp(), USERINFO_URL, e.getMessage());
             logUtils.updateResponseLog(logData, "Error retrieving user info", "99", null);
         }
 
