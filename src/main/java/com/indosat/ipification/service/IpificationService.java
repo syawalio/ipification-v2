@@ -7,6 +7,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -26,12 +27,14 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 public class IpificationService {
     private final LogUtils logUtils;
-  
-    private final RestTemplate restTemplate = new RestTemplate();
+   
+    private final SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
+
+    private final RestTemplate restTemplate = new RestTemplate(requestFactory);
     // private final ObjectMapper objectMapper = new ObjectMapper();
 
-    private static final String TOKEN_URL = "https://api.ipification.com/auth/realms/ipification/protocol/openid-connect/token";
-    private static final String USERINFO_URL = "https://api.ipification.com/auth/realms/ipification/protocol/openid-connect/userinfo";
+    private static final String TOKEN_URL = "https://api.stage.ipification.com/auth/realms/ipification/protocol/openid-connect/token";
+    private static final String USERINFO_URL = "https://api.stage.ipification.com/auth/realms/ipification/protocol/openid-connect/userinfo";
 
 
     @Value("${client.id}")
