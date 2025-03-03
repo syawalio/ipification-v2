@@ -70,6 +70,11 @@
             <version>20180813</version>
             <type>jar</type>
         </dependency>
+		<dependency>
+    <groupId>org.apache.httpcomponents.core5</groupId>
+    <artifactId>httpcore5</artifactId>
+    <version>5.2.1</version>
+</dependency>
 	</dependencies>
 
 	<!-- <build>
@@ -101,7 +106,7 @@
 		</plugins>
 	</build> -->
         
-        <build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
