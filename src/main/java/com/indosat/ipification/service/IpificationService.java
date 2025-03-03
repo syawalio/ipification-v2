@@ -3,6 +3,8 @@ package com.indosat.ipification.service;
 import java.net.InetSocketAddress;
 import java.net.Proxy;
 
+import jakarta.annotation.PostConstruct;
+
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
@@ -32,8 +34,11 @@ public class IpificationService {
     private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    private static final String TOKEN_URL = "https://api.stage.ipification.com/auth/realms/ipification/protocol/openid-connect/token";
-    private static final String USERINFO_URL = "https://api.stage.ipification.com/auth/realms/ipification/protocol/openid-connect/userinfo";
+    @Value("${ipification.token.url}")
+    private String TOKEN_URL;
+
+    @Value("${ipification.userinfo.url}")
+    private String USERINFO_URL;
 
     @Value("${client.id}")
     private String CLIENT_ID;
@@ -47,26 +52,20 @@ public class IpificationService {
     @Value("${proxy.port}")
     private int PROXY_PORT;
 
-    public IpificationService() {
-        this.logUtils = null;
-        this.restTemplate = new RestTemplate();
-    }
-    
-    public IpificationService(LogUtils logUtils) {
-        this.logUtils = logUtils;
-    
+    @PostConstruct
+    private void init() {
         SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
         factory.setConnectTimeout(5000); // 5 seconds
         factory.setReadTimeout(5000); // 5 seconds
-    
+
         // Set proxy if available
         if (PROXY_HOST != null && !PROXY_HOST.isEmpty() && PROXY_PORT > 0) {
             Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(PROXY_HOST, PROXY_PORT));
             factory.setProxy(proxy);
             log.info("Using proxy: {}:{}", PROXY_HOST, PROXY_PORT);
         }
-    
-        this.restTemplate = new RestTemplate(factory);
+
+        this.restTemplate.setRequestFactory(factory);
     }
 
     public IResponse sendHttpPostToken(IRequest req) {
@@ -105,8 +104,9 @@ public class IpificationService {
 
             logUtils.updateResponseLog(logData, responseStr, response.getStatusCode().toString(), null);
         } catch (Exception e) {
-            log.info("Error retrieving token for noHp={} from URL={} : {}", req.getNohp(), TOKEN_URL, e.getMessage());
+            log.error("Error retrieving token for noHp={} from URL={} : {}", req.getNohp(), TOKEN_URL, e.getMessage(), e);
             logUtils.updateResponseLog(logData, "Error retrieving token", "99", null);
+            throw new RuntimeException("Error retrieving token", e);
         }
 
         return responseToken;
@@ -138,6 +138,7 @@ public class IpificationService {
         } catch (Exception e) {
             log.error("Error retrieving user info for noHp={} : {}", req.getNohp(), e.getMessage(), e);
             logUtils.updateResponseLog(logData, "Error retrieving user info", "99", null);
+            throw new RuntimeException("Error retrieving user info", e);
         }
     
         return userInfo;

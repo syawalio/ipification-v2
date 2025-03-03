@@ -10,37 +10,6 @@ import com.indosat.ipification.repository.LogRepository;
 
 import lombok.AllArgsConstructor;
 
-// @Component
-// @AllArgsConstructor
-// public class LogUtils {
-//     private final LogRepository lr;
-
-//     public void saveLog(String noHp, String message, String service, boolean isRequest, String rc, Boolean result) {
-//         LogEntity log = new LogEntity();
-//         log.setUid(UUID.randomUUID());
-//         log.setNoHp(noHp);
-//         log.setService(service);
-
-//         if (isRequest) {
-//             log.setRequest(message);
-//             log.setRequestDate(new Date());
-//             log.setResponse(null);
-//             log.setResponseDate(null);
-//         } else {
-//             log.setRequest(null);
-//             log.setRequestDate(null);
-//             log.setResponse(message);
-//             log.setResponseDate(new Date());
-//             log.setRc(rc);
-//             log.setResult(result);
-//         }
-
-//         lr.save(log);
-//     }
-// }
-
-
-
 @Component
 @AllArgsConstructor
 public class LogUtils {
@@ -77,7 +46,7 @@ public class LogUtils {
         log.setResponse(message);
         log.setResponseDate(new Date());
         log.setRc("99");
-        log.setResult(null);
+        log.setResult(Boolean.FALSE);
 
         lr.save(log);
     }

@@ -1,6 +1,7 @@
 package com.indosat.ipification.service;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import com.indosat.ipification.entity.CounterEntity;
 import com.indosat.ipification.repository.CounterRepository;
@@ -14,8 +15,10 @@ public class CounterService {
 
     private final CounterRepository counterRepository;
 
+    @Value("${counter.limit:100}")
+    private int limit;
+
     public boolean isLimitExceeded(String noHp) {
-        int limit = 100;
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date today = new Date();
 
