@@ -47,23 +47,26 @@ public class IpificationService {
     @Value("${proxy.port}")
     private int PROXY_PORT;
 
+    public IpificationService() {
+        this.logUtils = null;
+        this.restTemplate = new RestTemplate();
+    }
+    
     public IpificationService(LogUtils logUtils) {
         this.logUtils = logUtils;
-        this.restTemplate = createRestTemplate();
-    }
-
-    private RestTemplate createRestTemplate() {
+    
         SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
         factory.setConnectTimeout(5000); // 5 seconds
         factory.setReadTimeout(5000); // 5 seconds
-
+    
+        // Set proxy if available
         if (PROXY_HOST != null && !PROXY_HOST.isEmpty() && PROXY_PORT > 0) {
             Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(PROXY_HOST, PROXY_PORT));
             factory.setProxy(proxy);
             log.info("Using proxy: {}:{}", PROXY_HOST, PROXY_PORT);
         }
-
-        return new RestTemplate(factory);
+    
+        this.restTemplate = new RestTemplate(factory);
     }
 
     public IResponse sendHttpPostToken(IRequest req) {
